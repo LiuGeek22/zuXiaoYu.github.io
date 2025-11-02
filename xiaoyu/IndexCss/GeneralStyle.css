@@ -1,0 +1,73 @@
+/* 1. 基础元素重置 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* 统一盒模型为 border-box */
+}
+
+/* 2. 文本与字体重置 */
+body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif; /* 系统无衬线字体，适配多平台 */
+    font-size: 16px; /* 基础字体大小，便于 rem 计算 */
+    line-height: 1.5; /* 舒适行高，提升阅读体验 */
+    color: #333; /* 基础文本色，避免默认灰色过浅 */
+    background-color: #fff; /* 基础背景色，防止浏览器默认透明 */
+}
+
+/* 3. 列表元素重置 */
+ul, ol, li {
+    list-style: none; /* 清除默认列表样式 */
+}
+
+/* 4. 链接元素重置 */
+a {
+    text-decoration: none; /* 清除默认下划线 */
+    color: inherit; /* 继承父级文本色，避免默认蓝色 */
+    outline: none; /* 清除聚焦默认外边框（可根据交互需求保留） */
+}
+
+/* 5. 媒体元素重置 */
+img, video, audio {
+    max-width: 100%; /* 防止媒体元素超出容器 */
+    height: auto; /* 保持媒体元素宽高比 */
+    vertical-align: middle; /* 解决图片底部默认空隙问题 */
+}
+
+/* 6. 表单元素重置 */
+input, button, select, textarea {
+    font-family: inherit; /* 继承父级字体，避免表单字体不一致 */
+    font-size: inherit; /* 继承父级字号 */
+    border: none; /* 清除默认边框 */
+    outline: none; /* 清除聚焦默认外边框（需自行添加自定义聚焦样式） */
+    background: transparent; /* 清除默认背景 */
+}
+
+textarea {
+    resize: vertical; /* 仅允许垂直拉伸文本域，防止布局混乱 */
+}
+
+/* 7. 表格元素重置 */
+table {
+    border-collapse: collapse; /* 合并边框，避免默认双边框 */
+    border-spacing: 0; /* 清除边框间距 */
+    width: 100%; /* 表格默认占满容器（可按需修改） */
+}
+
+/* 8. 其他细节重置 */
+h1, h2, h3, h4, h5, h6 {
+    font-weight: normal; /* 清除标题默认加粗，按需自定义 */
+    font-size: inherit; /* 继承父级字号，按需自定义 */
+}
+
+button {
+    cursor: pointer; /* 按钮默认鼠标指针为手型 */
+}
+
+/* 清除浮动（可选，按需使用） */
+.clearfix::after {
+    content: "";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    height: 0;
+}
